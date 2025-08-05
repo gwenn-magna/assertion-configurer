@@ -48,7 +48,7 @@ fields = {**core_fields, **schemas[check_type]["fields"]}
 
 # Step 2: Build form
 output = {}
-st.markdown("### ✍️ Fill in the Fields")
+st.markdown("#### ✍️ Configure Your Test")
 
 for key, meta in fields.items():
     ftype = meta["type"]
@@ -80,7 +80,7 @@ for key, meta in fields.items():
         output[key] = value
 
 # Step 3: Show and download output
-st.markdown("### 🧾 Generated JSON")
+st.markdown("#### 🧾 Generated JSON")
 st.code(json.dumps(output, indent=2), language="json")
 
 from streamlit.components.v1 import html
